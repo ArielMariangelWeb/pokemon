@@ -1,0 +1,21 @@
+<div class="container p-5">
+    <div class="row">
+        <div class="col-6 search-container pokemon-card">
+            <app-search [filter]="filter" (nameEmmit)="nameReceived($event)"></app-search>
+        </div>
+        <div class="col-6 pb-5 pokemon-card">
+            <div class="outer-square">
+                <div class="inner-square">
+                    <app-description *ngIf="flagDescription" [pokemonDesc]="pokemonDesc"></app-description>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-4 pb-5"><button type="button" class="btn btn-primary" (click)="allPokemon()">Orden Normal</button></div>
+        <div class="col-4 pb-5"><button type="button" class="btn btn-primary" (click)="alphaOrder()">Orden Alfabetico</button></div>
+        <div class="col-4 pb-5"><button type="button" class="btn btn-primary" (click)="descOrder()">Orden Descendente</button></div>
+        <p class="p-filter" *ngIf="filter" (click)="allPokemon()">Quitar filtro X</p>
+        <app-table [pokemones]="pokemones" (deleteEmmit)="deleteReceived($event)"></app-table>
+    </div>
+</div>

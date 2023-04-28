@@ -1,0 +1,30 @@
+.p-filter{
+    cursor: pointer;
+    color: red;
+    font-weight: 700;
+}
+
+
+.pokemon-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outer-square {
+    width: 350px;
+    height: 350px;
+    background-color: #c00;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-square {
+    width: 70%;
+    height: 70%;
+    background-color: #fff;
+    border: 2px solid #888;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,16 @@
+<table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col" class="text-center title">Nombre</th>
+        <th scope="col" class="text-center title">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pokemon of pokemones | paginate: { itemsPerPage: 10, currentPage: page }">
+        <td class="text-center pokemon-name">{{pokemon.name}}</td>
+        <td class="text-center"><button type="button" (click)="delete(pokemon.name)" class="btn btn-danger">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Next"></pagination-controls>
+  

@@ -1,0 +1,6 @@
+<div class="input-group mb-3">
+    <input [(ngModel)]="name" type="text" class="form-control" placeholder="Escribe el nombre de tu pokemón" aria-label="Escribe el nombre de tu pokemón" aria-describedby="basic-addon2" [disabled]="filter">
+    <div class="input-group-append">
+      <button (click)="search()" class="btn btn-outline-secondary" type="button" [disabled]="filter">Buscar</button>
+    </div>
+  </div>
