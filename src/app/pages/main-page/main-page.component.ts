@@ -26,7 +26,7 @@ export class MainPageComponent implements OnInit {
     this.filter = false;
     this.flagDescription = false;
     this.pokemon.getPokemon().subscribe((data:Pokeapi)=>{
-      this.pokemones = data.results
+      this.pokemones = data.results;
       for(let i=0; i<this.deletedPokemons.length; i++) {
         this.pokemones = this.pokemones.filter(f => f.name !== this.deletedPokemons[i]);
       }
@@ -49,7 +49,7 @@ export class MainPageComponent implements OnInit {
   }
   deleteReceived(pokemon: string){
     this.deletedPokemons.push(pokemon);
-    this.pokemones = this.pokemones.filter(f => f.name !== pokemon)
+    this.pokemones = this.pokemones.filter(f => f.name !== pokemon);
   }
 
   alphaOrder(){

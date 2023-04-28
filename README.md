@@ -14,7 +14,7 @@
 
 #### ARRANQUE APLICACIÓN ####
 
-- npm install
+- npm install -f
 - npm start
 
 

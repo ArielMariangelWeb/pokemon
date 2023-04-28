@@ -25,6 +25,6 @@ export class TableComponent implements OnInit {
   }
 
   delete(pokemon: string){
-    this.deleteEmmit.emit(pokemon)
+    this.deleteEmmit.emit(pokemon);
   }
 }
